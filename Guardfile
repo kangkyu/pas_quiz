@@ -11,5 +11,5 @@
 #   watch(%r{file/path}) { `command(s)` }
 #
 guard :shell do
-  watch(/(.*).txt/) {|m| `tail #{m[0]}` }
+  watch(/^(.*).rb$/) {|m| `rake test TEST=#{m[1].chomp("_test")}_test.rb` }
 end
