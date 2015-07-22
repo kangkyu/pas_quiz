@@ -17,10 +17,7 @@ class Fizzbuzz
 
   def result_console
     (1..limit).each do |number|
-      fizzbuzz = ""
-      fizzbuzz += "fizz" if number % 3 == 0
-      fizzbuzz += "buzz" if number % 5 == 0
-      puts number.to_s + " " + fizzbuzz
+      puts "#{number} #{"fizz" if number % 3 == 0}#{"buzz" if number % 5 == 0}"
     end
   end
 end
