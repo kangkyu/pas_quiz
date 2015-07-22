@@ -4,6 +4,7 @@ class Fizzbuzz
     @limit = n
   end
 
+  # for testing
   def result_array
     result = []
     (1..limit).each do |number|
@@ -15,10 +16,22 @@ class Fizzbuzz
     result
   end
 
+  # ruby fizzbuzz.rb
   def result_console
     (1..limit).each do |number|
-      puts "#{number} #{"fizz" if number % 3 == 0}#{"buzz" if number % 5 == 0}"
+      puts number.to_s +
+        " " +
+        fizz_for(number) +
+        buzz_for(number)
     end
+  end
+
+  def fizz_for(number)
+    number % 3 == 0 ? "fizz" : ""
+  end
+
+  def buzz_for(number)
+    number % 5 == 0 ? "buzz" : ""
   end
 end
 
