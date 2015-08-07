@@ -1,3 +1,11 @@
+# 1. Write a function that capitalizes every third alphanumeric character in the following string:
+
+# Larubymeetup.com
+# so that your output looks like
+
+# laRubYmeEtuP.coM
+# Notice that, when counting every third character, we ignore the period, but we do include the period in the output.
+
 class EveryThird
   def self.result(input_string)
     input_array = input_string.chars.to_a

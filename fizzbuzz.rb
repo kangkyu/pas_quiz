@@ -1,3 +1,5 @@
+# 3. Write a program that prints out integers 1-100. If a number is divisible by 3, print the number, followed by a space, followed by “fizz”. If a number is divisible by 5, print the number, followed by a space, followed by “buzz”. If the number is divisible by both 3 and 5, print the number, followed by a space, followed by “fizzbuzz”.
+
 class Fizzbuzz
   attr_reader :limit
   def initialize(n)
