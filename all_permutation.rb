@@ -19,13 +19,13 @@
 
 def all_permutation_output
   [nil, true, false].permutation(3).reduce [] do |result, three_values|
-    a, b, c = three_values
-    str_array = three_values.map(&:inspect)
+    v1, v2, v3 = three_values
+    s1, s2, s3 = three_values.map(&:inspect)
     result.push \
-      ["%s && %s && %s" % str_array, a && b && c], 
-      ["%s || %s && %s" % str_array, a || b && c], 
-      ["%s || %s || %s" % str_array, a || b || c], 
-      ["%s && %s || %s" % str_array, a && b || c]
+      ["#{s1} && #{s2} && #{s3}", v1 && v2 && v3], 
+      ["#{s1} || #{s2} && #{s3}", v1 || v2 && v3], 
+      ["#{s1} || #{s2} || #{s3}", v1 || v2 || v3], 
+      ["#{s1} && #{s2} || #{s3}", v1 && v2 || v3]
   end
 end
 
